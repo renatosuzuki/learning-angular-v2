@@ -1,0 +1,14 @@
+<h1 *ngIf="true">Esse sera exibido</h1>
+<h1 *ngIf="false">Esse nao sera exibido</h1>
+
+<input type="text" (input)="numero = getValue($event)" />
+
+<h1 *ngIf="numero === '1'">O numero eh igual a 1</h1>
+<h1 *ngIf="numero !== '1'">O numero eh diferente de 1</h1>
+
+<h1 *ngFor="let n of arrNum">
+  <ul>
+    <li>{{ n }}</li>
+    <span *ngIf="n !== 7">Numero diferente de 7</span>
+  </ul>
+</h1>
